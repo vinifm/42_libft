@@ -16,7 +16,6 @@ OBJ 	= $(SRC:.c=.o)
 all: 		$(NAME)
 
 $(NAME): 	$(OBJ) $(INCLUDE)
-			
 
 clean:
 
