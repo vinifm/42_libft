@@ -15,11 +15,11 @@ OBJ 	= $(SRC:.c=.o)
 
 all: 		$(NAME)
 
-$(NAME): 	$(OBJ)
+$(NAME):	$(OBJ)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
 %.o: %.c $(INCLUDE)
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)
