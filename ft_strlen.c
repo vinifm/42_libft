@@ -6,13 +6,13 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 16:52:22 by viferrei          #+#    #+#             */
-/*   Updated: 2021/08/23 16:53:11 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/08/24 12:04:20 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	count;
 
