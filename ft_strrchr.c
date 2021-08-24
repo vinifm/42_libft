@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 14:24:47 by viferrei          #+#    #+#             */
-/*   Updated: 2021/08/24 14:38:14 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/08/24 16:59:32 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ const char	*ft_strrchr(const char *str, int c)
 	const char	*str_end;
 
 	str_end = ft_strchr(str, '\0');
-
 	while (str != 0)
 	{
 		if (*str_end == c)

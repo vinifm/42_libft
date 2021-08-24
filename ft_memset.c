@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 14:44:34 by viferrei          #+#    #+#             */
-/*   Updated: 2021/08/24 16:29:34 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/08/24 16:59:20 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_memset(void *str, int c, size_t len)
 	size_t	i;
 
 	i = 0;
-
 	while (i < len)
 	{
 		((unsigned char *) str)[i] = c;
