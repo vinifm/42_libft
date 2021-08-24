@@ -31,3 +31,7 @@ fclean: 	clean
 re: 		fclean all
 
 .PHONY: 	all clean fclean re
+
+run:		$(NAME)
+			$(RM) a.out
+			$(CC) $(CFLAGS)	main.c libft.a && ./a.out
