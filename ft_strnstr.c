@@ -6,9 +6,11 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 16:52:33 by viferrei          #+#    #+#             */
-/*   Updated: 2021/08/23 16:53:07 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/08/25 16:15:05 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	strchars(char *str)
 {
@@ -22,11 +24,11 @@ static int	strchars(char *str)
 	return (n - 1);
 }
 
-char	*ft_strnstr(char *str, char *to_find, unsigned int len)
+char	*ft_strnstr(char *str, char *to_find, size_t len)
 {
-	int	i;
-	int	j;
-	unsigned int l;
+	int		i;
+	int		j;
+	size_t	l;
 
 	i = 0;
 	l = 0;
