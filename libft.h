@@ -22,6 +22,8 @@ size_t			ft_strlen(const char *str);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(char *str, char *to_find, size_t len);
 int				ft_atoi(const char *str);
+void			*ft_calloc (size_t count, size_t size);
+char			*ft_strdup(const char *s1);
 
 void			ft_bzero(void *str, size_t n);
 void			*ft_memchr(const void *str, int c, size_t n);
