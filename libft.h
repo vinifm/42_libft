@@ -5,7 +5,7 @@
 # include <stdlib.h>
 
 int				ft_isalnum(int c);
-int 			ft_isalpha(int c);
+int				ft_isalpha(int c);
 int				ft_isascii(int c);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
@@ -22,7 +22,7 @@ size_t			ft_strlen(const char *str);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(char *str, char *to_find, size_t len);
 int				ft_atoi(const char *str);
-void			*ft_calloc (size_t count, size_t size);
+void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *s1);
 
 void			ft_bzero(void *str, size_t n);
@@ -38,3 +38,10 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
 #endif
+
+/* correct:
+
+- memset compil. failed
+
+- strlcat
+do: memccpy*/
