@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 16:52:15 by viferrei          #+#    #+#             */
-/*   Updated: 2021/08/25 16:38:28 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/08/28 17:06:29 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	src_size = ft_strlen(src);
 	if (dstsize < dest_size)
 	{
-		return (dest_size + (dstsize - 1));
+		return (dstsize + src_size);
 	}
 	while (dst[n] != 0)
 	{
