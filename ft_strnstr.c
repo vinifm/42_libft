@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 16:52:33 by viferrei          #+#    #+#             */
-/*   Updated: 2021/08/25 16:15:05 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/08/28 16:22:49 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strnstr(char *str, char *to_find, size_t len)
 	while (l < len)
 	{
 		j = 0;
-		while (str[i + j] == to_find[j])
+		while (str[i + j] == to_find[j] && (i + j) < (int)len)
 		{
 			if (j == strchars(to_find))
 			{
