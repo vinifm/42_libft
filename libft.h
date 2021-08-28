@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/28 16:49:02 by viferrei          #+#    #+#             */
+/*   Updated: 2021/08/28 16:49:04 by viferrei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -29,7 +41,7 @@ void			ft_bzero(void *str, size_t n);
 void			*ft_memchr(const void *str, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 // Setdds to c the first len bytes of the block of memory pointed by ptr.
-void			ft_memset(void *str, int c, size_t len);
+void			*ft_memset(void *str, int c, size_t len);
 void			*ft_memcpy(void *dst, const void *src, size_t len);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 
@@ -40,8 +52,6 @@ void			ft_putnbr_fd(int n, int fd);
 #endif
 
 /* correct:
-
-- memset compil. failed
 
 - strlcat
 do: memccpy*/
