@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 14:47:15 by viferrei          #+#    #+#             */
-/*   Updated: 2021/08/31 19:50:47 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/09/01 17:03:21 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static size_t	count_strs(char const *s, char c)
 		if (*s != c)
 		{
 			count++;
-			while (*s != '\0' && s != c)
+			while (*s != '\0' && *s != c)
 				s++;
 		}
 		else
@@ -31,35 +31,30 @@ static size_t	count_strs(char const *s, char c)
 	return (count);
 }
 
-static size_t	count_bytes(char const *s, char c)
-{
-	size_t	count;
-
-	count = 0;
-	while (*s != '\0')
-	{
-		if (*s != c)
-			count++;
-		s++;
-	}
-	return (count);
-}
-
 char	**ft_split(char const *s, char c)
 {
-	size_t	len;
-	char	*start;
-	char	**split;
+	size_t		len;
+	int			index;
+	const char	*start;
+	char		**split;
 
-	len = 0;
-	start = s;
-	**split = malloc(count_bytes(s, c) + 1);
+	split = (char **)malloc((count_strs(s, c)) * sizeof(*split));
+	if (!split)
+		return (0);
+	index = -1;
 	while (*s != '\0')
 	{
-		s++;
-		len++;
-		if (*s == c)
-			*split = ft_substr(start, 0, len);
-			start = s + 1;
+		while (*s && *s == c)
+			s++;
+		start = s;
+		len = 0;
+		while (*s && *s != c)
+		{
+			s++;
+			len++;
+		}
+		split[++index] = ft_substr(start, 0, len);
 	}
+	split[++index] = 0;
+	return (split);
 }
