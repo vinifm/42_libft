@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 11:22:31 by viferrei          #+#    #+#             */
-/*   Updated: 2021/08/31 14:40:14 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/09/01 17:05:44 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	sjoin_len;
 
 	sjoin_len = ft_strlen(s1) + ft_strlen(s2) + 1;
-	strjoin = malloc(sjoin_len);
+	strjoin = (char *) malloc(sjoin_len);
 	if (!strjoin)
 		return (NULL);
 	ft_strlcpy(strjoin, s1, ft_strlen(s1) + 1);
