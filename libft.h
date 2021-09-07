@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 16:49:02 by viferrei          #+#    #+#             */
-/*   Updated: 2021/09/06 15:43:24 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/09/06 20:30:52 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,3 +75,9 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
+
+/*
+correct
+striteri
+
+*/

@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 15:42:25 by viferrei          #+#    #+#             */
-/*   Updated: 2021/09/06 16:21:21 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/09/06 16:31:23 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!lst)
 		return (0);
-	while (lst)
+	new = ft_lstnew(f(lst->content));
+	if (!new)
 	{
-		new = ft_lstnew(f(lst->content));
-		if (!new)
-		{
-			ft_lstclear(new, del);
-			return (0);
-		}
-		new->next = ft_lstmap(lst->next, f, del);
-		return (new);
+		ft_lstclear(&new, del);
+		return (0);
 	}
+	(new)->next = ft_lstmap(lst->next, f, del);
+	return (new);
 }

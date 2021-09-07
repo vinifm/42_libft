@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 14:15:15 by viferrei          #+#    #+#             */
-/*   Updated: 2021/09/06 14:23:32 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/09/06 16:32:51 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_lstsize(t_list *lst)
 	int	n;
 
 	n = 0;
-	while (lst != '\0')
+	while (lst)
 	{
 		n++;
 		lst = lst->next;

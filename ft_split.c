@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 14:47:15 by viferrei          #+#    #+#             */
-/*   Updated: 2021/09/01 17:11:26 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/09/06 18:46:20 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	**ft_split(char const *s, char c)
 	const char	*start;
 	char		**split;
 
-	split = (char **) malloc((count_strs(s, c)) * sizeof(*split));
+	split = (char **) malloc(((count_strs(s, c)) + 1) * sizeof(*split));
 	if (!split)
 		return (0);
 	index = -1;
