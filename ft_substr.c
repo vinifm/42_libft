@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 09:31:23 by viferrei          #+#    #+#             */
-/*   Updated: 2021/09/01 17:05:47 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/09/08 16:12:10 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	substr = (char *) malloc(len + 1);
 	n = 0;
-	if (s[0] == '\0' || start > ft_strlen(s) || !substr)
-		return (NULL);
-	while (len-- && s[start + n] != '\0')
+	if (s[0] == '\0' || !substr)
+		return (0);
+	while (start < ft_strlen(s) && len > 0 && s[start + n] != '\0')
 	{
 		substr[n] = s[start + n];
 		n++;
+		len--;
 	}
 	substr[n] = '\0';
 	return (substr);
