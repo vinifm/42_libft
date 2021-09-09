@@ -39,8 +39,8 @@ be allowed to use in all your other projects</blockquote>
 * char	*[`ft_strtrim`](ft_strtrim.c)(char const *s1, char const *set) - returns a copy of s1 with the characters specified in _set_ removed from the beginning and the end.
 * char	**[`ft_split`](ft_split.c)(char const *s, char c) - returns an array of strings obtained by splitting _s_ using _c_ as a delimiter.
 * char	*[`ft_itoa`](ft_itoa.c)(int n) - converts integer to string.
-* char	*[`ft_strmapi`](ft_strmapi.c)(char const *s, char (*f)(unsigned int, char)) - creates a new string with the function _f_ applied to the characters in _s_.
-* void	[`ft_striteri`](ft_striteri.c)(char *s, void (*f)(unsigned int, char*)) - applies the function _f_ to each character in _s_.
+* char	*[`ft_strmapi`](ft_strmapi.c)(char const *s, char (\*f)(unsigned int, char)) - creates a new string with the function _f_ applied to the characters in _s_.
+* void	[`ft_striteri`](ft_striteri.c)(char \*s, void (\*f)(unsigned int, char*)) - applies the function _f_ to each character in _s_.
 * void	[`ft_putchar_fd`](ft_putchar_fd.c)(char c, int fd) - outputs _c_ to given file descriptor.
 * void	[`ft_putstr_fd`](ft_putstr_fd.c)(char *s, int fd) - outputs _s_ to given file descriptor.
 * void	[`ft_putnbr_fd`](ft_putnubr_fd.c)(int n, int fd) - outputs _n_ to given file descriptor.
@@ -53,8 +53,11 @@ be allowed to use in all your other projects</blockquote>
 * int		[`ft_lstsize`](ft_lstsize.c)(t_list *lst) - counts number of elements in the list.
 * t_list	*[`ft_lstlast`](ft_lstlast.c)(t_list *lst) - returns the last element of the list.
 * void		[`ft_lstadd_back`](ft_lstadd_back.c)(t_list **lst, t_list *new) - adds _new_ at the end of the list.
-* void		[`ft_lstdelone`](ft_lstdelone.c)(t_list *lst, void (*del)(void*)) - frees the memory of the element's content.
-* void		[`ft_lstclear`](ft_lstclear.c)(t_list **lst, void (*del)(void*)) - deletes and frees the given element and every successor.
-* void		[`ft_lstiter`](ft_lstiter.c)(t_list *lst, void (*f)(void *)) - iterates _lst_ and applies _f_ to the content of each element.
-* t_list	*[`ft_lstmap`](ft_lstmap.c)(t_list *lst, void *(\*f)(void *), void (*del)(void *)) - creates a new list from the application of _f_ to the content of each elements.
+* void		[`ft_lstdelone`](ft_lstdelone.c)(t_list \*lst, void (\*del)(void*)) - frees the memory of the element's content.
+* void		[`ft_lstclear`](ft_lstclear.c)(t_list **lst, void (\*del)(void\*)) - deletes and frees the given element and every successor.
+* void		[`ft_lstiter`](ft_lstiter.c)(t_list *lst, void (\*f)(void *)) - iterates _lst_ and applies _f_ to the content of each element.
+* t_list	*[`ft_lstmap`](ft_lstmap.c)(t_list *lst, void *(\*f)(void *), void (\*del)(void *)) - creates a new list from the application of _f_ to the content of each elements.
 
+# Third-party tests.
+* @tripouille's [libftTester](https://github.com/Tripouille/libftTester).
+* @jtoty and @ska42 [libft-war-machine](https://github.com/ska42/libft-war-machine).
