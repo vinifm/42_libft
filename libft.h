@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 16:49:02 by viferrei          #+#    #+#             */
-/*   Updated: 2021/09/09 11:36:24 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/09/09 14:39:10 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ typedef struct s_list
 	struct s_list	*next;
 }		t_list;
 
-int		ft_isalnum(int c);
 int		ft_isalpha(int c);
-int		ft_isascii(int c);
 int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
