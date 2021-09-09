@@ -48,12 +48,13 @@ be allowed to use in all your other projects</blockquote>
 
 ## Bonus functions.
 
-* t_list	*[`ft_lstnew`](void *content) - creates a new element.
-* void		[`ft_lstadd_front`](t_list **lst, t_list *new) - adds _new_ at the beginning of the list.
-* int		[`ft_lstsize`](t_list *lst) - counts number of elements in the list.
-* t_list	*[`ft_lstlast`](t_list *lst) - returns the last element of the list.
-* void		[`ft_lstadd_back`](t_list **lst, t_list *new) - adds _new_ at the end of the list.
-* void		[`ft_lstdelone`](t_list *lst, void (*del)(void*)) - frees the memory of the element's content.
-* void		[`ft_lstclear`](t_list **lst, void (*del)(void*)) - deletes and frees the given element and every successor.
-* void		[`ft_lstiter`](t_list *lst, void (*f)(void *)) - iterates _lst_ and applies _f_ to the content of each element.
-* t_list	*[`ft_lstmap`](t_list *lst, void *(*f)(void *), void (*del)(void *)) - creates a new list from the application of _f_ to the content of each elements.
+* t_list	*[`ft_lstnew`](ft_lstnew.c)(void *content) - creates a new element.
+* void		[`ft_lstadd_front`](ft_lstadd_front.c)(t_list **lst, t_list *new) - adds _new_ at the beginning of the list.
+* int		[`ft_lstsize`](ft_lstsize.c)(t_list *lst) - counts number of elements in the list.
+* t_list	*[`ft_lstlast`](ft_lstlast.c)(t_list *lst) - returns the last element of the list.
+* void		[`ft_lstadd_back`](ft_lstadd_back.c)(t_list **lst, t_list *new) - adds _new_ at the end of the list.
+* void		[`ft_lstdelone`](ft_lstdelone.c)(t_list *lst, void (*del)(void*)) - frees the memory of the element's content.
+* void		[`ft_lstclear`](ft_lstclear.c)(t_list **lst, void (*del)(void*)) - deletes and frees the given element and every successor.
+* void		[`ft_lstiter`](ft_lstiter.c)(t_list *lst, void (*f)(void *)) - iterates _lst_ and applies _f_ to the content of each element.
+* t_list	*[`ft_lstmap`](ft_lstmap.c)(t_list *lst, void *(\*f)(void *), void (*del)(void *)) - creates a new list from the application of _f_ to the content of each elements.
+
