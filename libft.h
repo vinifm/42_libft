@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 16:49:02 by viferrei          #+#    #+#             */
-/*   Updated: 2021/09/08 15:13:22 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/09/09 11:36:24 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,7 @@ int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
-// Returns a pointer to the first occurrence of c in the string str
 char	*ft_strchr(const char *str, int c);
-// Returns a pointer to the last occurrence of c in the string str
 char	*ft_strrchr(const char *str, int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
@@ -47,7 +45,6 @@ char	*ft_strdup(const char *s1);
 void	ft_bzero(void *str, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-// Setdds to c the first len bytes of the block of memory pointed by ptr.
 void	*ft_memset(void *str, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t len);
 void	*ft_memmove(void *dst, const void *src, size_t len);
@@ -75,9 +72,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
-
-/*
-correct
-striteri
-
-*/
