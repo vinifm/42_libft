@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 13:29:52 by viferrei          #+#    #+#             */
-/*   Updated: 2021/09/02 17:33:25 by viferrei         ###   ########.fr       */
+/*   Updated: 2021/09/10 07:42:49 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,7 @@ static int	count_decimals(int n)
 		n = n / 10;
 		count++;
 	}
-	if (minus)
-		return (count + 1);
-	else
-		return (count);
+	return (count + minus);
 }
 
 char	*ft_itoa(int n)
@@ -62,8 +59,7 @@ char	*ft_itoa(int n)
 		return (0);
 	if (i_min)
 		return (writemin(str));
-	else
-		return (writestr(str, decimal, n, minus));
+	return (writestr(str, decimal, n, minus));
 }
 
 static char	*writestr(char *str, int decimal, int n, int minus)

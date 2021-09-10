@@ -30,7 +30,7 @@ bonus:		$(BONUS_O)
 			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 clean:
-			$(RM) $(OBJ)
+			$(RM) $(OBJ) $(BONUS_O)
 
 fclean: 	clean
 			$(RM) $(NAME)
