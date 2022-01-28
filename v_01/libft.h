@@ -6,7 +6,7 @@
 /*   By: viferrei <viferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 16:49:02 by viferrei          #+#    #+#             */
-/*   Updated: 2022/01/28 17:15:03 by viferrei         ###   ########.fr       */
+/*   Updated: 2022/01/28 18:03:30 by viferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,12 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include <stdarg.h>
 
-# include <limits.h>
+# define INT_MIN	-2147483648
+# define INT_MAX	2147483647
+# define UINT_MAX	4294967295
+# define OPEN_MAX	256
 
 typedef struct s_list
 {
@@ -73,13 +77,54 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-/* ----- GET_NEXT_LINE functions */
-char	*get_next_line(int fd);
-int		read_file(int fd, char **buffer, char **s_buff, char **line);
-char	*get_line(char **line, char **s_buff);
+/* ----- GET_NEXT_LINE functions ----- */
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10000000
 # endif
+
+char	*get_next_line(int fd);
+int		read_file(int fd, char **buffer, char **s_buff, char **line);
+char	*get_line(char **line, char **s_buff);
+
+/* ----- PRINTF structs and functions ----- */
+
+typedef struct s_format
+{
+	char	*format;
+	int		index;
+	va_list	arg;
+	int		len;
+}	t_format;
+
+typedef struct s_holder
+{
+	char	*argument;
+	char	specifier;
+	size_t	len;
+}	t_holder;
+
+int			ft_printf(const char *format, ...);
+int			ft_vprintf(const char *format, va_list arg);
+
+t_format	*ft_init_format(const char *format, va_list arg);
+t_holder	*ft_init_holder(void);
+
+void		ft_placeholder(t_format *fmt, t_holder *holder);
+void		ft_specifier(t_format *fmt, t_holder *holder);
+void		ft_conversions(t_format *fmt, t_holder *holder);
+
+/* CONVERSIONS */
+void		ft_convert_c(t_format *fmt, t_holder *holder);
+void		ft_convert_di(t_format *fmt, t_holder *holder);
+void		ft_convert_u(t_format *fmt, t_holder *holder);
+void		ft_convert_s(t_format *fmt, t_holder *holder);
+void		ft_convert_percent(t_holder *holder);
+void		ft_convert_p(t_format *fmt, t_holder *holder);
+void		ft_convert_x(t_format *fmt, t_holder *holder);
+
+/* AUXILIARIES */
+char		*ft_uitoa(unsigned int n);
+char		*ft_itoa_base(unsigned long nbr, char *base);
 
 #endif
